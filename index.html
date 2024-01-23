@@ -11,12 +11,14 @@
     rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.0/dist/full.min.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://kit.fontawesome.com/a109a545f2.js" crossorigin="anonymous"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            clifford: '#da373d',
+            'primary-text': '#FF4240',
+            'primary-button': '#FF4240',
           }
         }
       }
@@ -30,45 +32,112 @@
 </head>
 
 <body class="font-manrope">
-  <div class="navbar bg-base-100">
-    <div class="navbar-start">
-      <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+  <header>
+    <!-- navbar -->
+    <nav class="container mx-auto">
+      <div class="navbar bg-base-100">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
+              </svg>
+            </div>
+            <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+              <li><a>Home</a></li>
+              <li><a>About</a></li>
+              <li><a>Pages</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact</a></li>
+            </ul>
+          </div>
+          <a class="btn btn-ghost text-4xl font-extrabold">Hockey’s</a>
         </div>
-        <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-          <li><a>Item 1</a></li>
-          <li>
-            <a>Parent</a>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </li>
-          <li><a>Item 3</a></li>
-        </ul>
+        <div class="navbar-center hidden lg:flex">
+          <ul class="menu menu-horizontal px-1">
+            <li><a><span class="text-primary-text">Home</span></a></li>
+            <li><a>About</a></li>
+            <li><a>Pages</a></li>
+            <li><a>Blog</a></li>
+            <li><a>Contact</a></li>
+          </ul>
+        </div>
+        <div class="navbar-end">
+          <div class="inline-block lg:inline mr-1 lg:mr-6">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+          <a class="btn text-xl text-white bg-primary-button">Get Ticket</a>
+        </div>
       </div>
-      <a class="btn btn-ghost text-xl">daisyUI</a>
-    </div>
-    <div class="navbar-center hidden lg:flex">
-      <ul class="menu menu-horizontal px-1">
-        <li><a>Item 1</a></li>
-        <li>
-          <details>
-            <summary>Parent</summary>
-            <ul class="p-2">
-              <li><a>Submenu 1</a></li>
-              <li><a>Submenu 2</a></li>
-            </ul>
-          </details>
-        </li>
-        <li><a>Item 3</a></li>
-      </ul>
-    </div>
-    <div class="navbar-end">
-      <a class="btn">Button</a>
-    </div>
-  </div>
+    </nav>
+    <!-- banner section -->
+    <section class="container mx-auto mb-24">
+      <div class="carousel w-full">
+        <div id="slide1" class="carousel-item relative w-full">
+          <img src="images/1.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide3" class="btn btn-circle bg-transparent">❮</a>
+            <a href="#slide2" class="btn btn-circle bg-transparent">❯</a>
+          </div>
+        </div>
+        <div id="slide2" class="carousel-item relative w-full">
+          <img src="images/2.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide1" class="btn btn-circle bg-transparent">❮</a>
+            <a href="#slide3" class="btn btn-circle bg-transparent">❯</a>
+          </div>
+        </div>
+        <div id="slide3" class="carousel-item relative w-full">
+          <img src="images/3.png" class="w-full" />
+          <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a href="#slide2" class="btn btn-circle bg-transparent">❮</a>
+            <a href="#slide1" class="btn btn-circle bg-transparent">❯</a>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="bg-[#131318] p-8">
+        <h4 class="text-white text-2xl">Meet all the heroes from the field</h4>
+        <p class="text-[#ffffff99]">Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit nullam proin. </p> -->
+      </div>
+    </section>
+  </header>
+  <main class="container mx-auto">
+    <!-- progress section -->
+    <section>
+      <div class="text-center mb-8">
+        <h2 class="text-4xl text-[#131318] font-extrabold mb-6">Professional Hockeys Club</h2>
+        <p>Dit amet consectetur. Condimentum dignissim adipiscing aliquam turpis placerat dolor. Purus urna in sit
+          nullam proin. </p>
+      </div>
+      <div class="flex gap-6 lg:flex-row flex-col justify-center ">
+        <div class="text-center lg:px-7 px-16">
+          <div class="radial-progress text-red-500" style="--value:70;" role="progressbar"><span
+              class="m-7 text-2xl font-extrabold text-[#131318]">70%</span></div>
+          <h2 class="text-xl font-semibold text-[#131318] my-5">Prayer Facility</h2>
+          <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+        </div>
+        <div class="text-center lg:px-7 px-16">
+          <div class="radial-progress text-[#49D293]" style="--value:80;" role="progressbar"><span
+              class="m-7 text-2xl font-extrabold text-[#131318]">80%</span></div>
+          <h2 class="text-xl font-semibold text-[#131318] my-5">Experienced Coach</h2>
+          <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+        </div>
+        <div class="text-center lg:px-7 px-16">
+          <div class="radial-progress text-yellow-400" style="--value:70;" role="progressbar"><span
+              class="m-7 text-2xl font-extrabold text-[#131318]">70%</span></div>
+          <h2 class="text-xl font-semibold text-[#131318] my-5">Senior Player</h2>
+          <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+        </div>
+        <div class="text-center lg:px-7 px-16">
+          <div class="radial-progress text-[#4C8DF1]" style="--value:60;" role="progressbar"><span
+              class="m-7 text-2xl font-extrabold text-[#131318]">60%</span></div>
+          <h2 class="text-xl font-semibold text-[#131318] my-5">Training Ground</h2>
+          <p>Amet consectetur. Condimentum dignissim adipiscing .</p>
+        </div>
+      </div>
+    </section>
+  </main>
 </body>
 
 </html>
